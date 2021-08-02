@@ -31,18 +31,24 @@ class Harshad:
         return list(map(int, list(str(num))))
 
     def next(self):
-        num = self._nums[-1] + 1
-        if self._nums and self.is_harshad(num):
-            self._nums.append(num)
-            return num
+        if self._nums:
+            num = self._nums[-1] + 1
+            if self.is_harshad(num):
+                self._nums.append(num)
+                return num
+            else:
+                raise StopIteration
         else:
             raise StopIteration
 
     def prev(self):
-        num = self._nums[0] - 1
-        if self._nums and self.is_harshad(num):
-            self._nums.insert(0, num)
-            return num
+        if self._nums:
+            num = self._nums[0] - 1
+            if self.is_harshad(num):
+                self._nums.insert(0, num)
+                return num
+            else:
+                raise StopIteration
         else:
             raise StopIteration
 
