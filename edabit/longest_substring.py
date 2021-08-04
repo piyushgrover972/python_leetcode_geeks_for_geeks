@@ -3,7 +3,7 @@
 """
 
 import re
-
+from utils import Test
 
 def remainder(divisor):
     def _find_rem(dividend):
@@ -35,12 +35,6 @@ def longest_substring(digits: str) -> str:
             max_len_span = spn
 
     return digits[max_len_span[0]:max_len_span[1]]
-
-
-class Test:
-    @classmethod
-    def assert_equals(cls, func_out: str, expected_out: str):
-        assert func_out == expected_out, f"Function output '{func_out}' != Expected output '{expected_out}'"
 
 
 if __name__ == '__main__':
