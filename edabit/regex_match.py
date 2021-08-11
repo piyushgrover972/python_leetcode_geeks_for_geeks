@@ -41,7 +41,7 @@ def wildcard_match(pattern: str, string: str) -> bool:
 
     for sub_pat in sub_patterns:
         if WILD_SINGLE_CHAR not in sub_pat:
-
+            pass
 
     return match
 
