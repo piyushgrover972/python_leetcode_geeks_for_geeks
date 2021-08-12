@@ -1,5 +1,9 @@
-# User function Template for python3
+"""
+    Original Problem: https://practice.geeksforgeeks.org/problems/minimum-steps-to-make-product-equal-to-one/1
+"""
 
+
+# User function Template for python3
 class Solution:
     def makeProductOne(self, arr, N):
         """
