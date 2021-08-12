@@ -5,24 +5,33 @@
 
 # User function Template for python3
 class Solution:
+    def next_alive(self, l: list, pos: int):
+        try:
+            p = l.index(1, pos + 1)
+        except ValueError:
+            p = l.index(1, 0)
+
+        return p
+
     def find(self, N = 5):
-        l = list(range(1, N + 1))
+        l = [1] * N
         sword = 0
         killed = None
 
-        while len(l) > 1:
+        while True:
             # The person next to the one having sword is killed (in a circle)...
-            killed = (sword + 1) % len(l)
-            try:
-                # After the person is killed, it is removed from the queue...
-                l.pop(killed)
-            except IndexError:
-                pass
+            killed = self.next_alive(l, sword)
+
+            if sword == killed:
+                break
+
+            # After the person is killed, it is removed from the queue...
+            l[killed] = 0
 
             # Since the killed person is removed, the next person in queue takes its position...
-            sword = killed
+            sword = self.next_alive(l, killed)
 
-        return l[0]
+        return sword + 1
 
 
 # {
@@ -31,7 +40,7 @@ class Solution:
 
 if __name__ == '__main__':
     ob = Solution()
-    print(ob.find(90))
+    print(ob.find(2000))
     # t = int(input())
     # for _ in range(t):
     #     N = int(input())
