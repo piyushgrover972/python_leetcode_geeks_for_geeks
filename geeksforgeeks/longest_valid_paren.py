@@ -29,9 +29,6 @@ class Solution:
 
     def maxLength(self, S):
 
-        import sys
-        self._debug(sys.version)
-
         PAREN_CLOSE = ')'
         PAREN_OPEN = '('
 
@@ -42,12 +39,12 @@ class Solution:
 
         for pos_ch_tup in enumerate(S):
             stack.append(paren_t(*pos_ch_tup))
-            self._debug("1. {stack}".format(stack=stack))
+            # self._debug("1. {stack}".format(stack=stack))
             if stack[-1].paren == PAREN_CLOSE and stack[-2].paren == PAREN_OPEN:
                 stack.pop()
                 stack.pop()
 
-            self._debug("2. {stack}".format(stack=stack))
+            # self._debug("2. {stack}".format(stack=stack))
 
         max_len = l - stack[-1].pos
         for i, elem in enumerate(stack):
