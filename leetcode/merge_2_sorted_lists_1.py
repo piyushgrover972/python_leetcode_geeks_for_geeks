@@ -2,6 +2,8 @@
     https://leetcode.com/problems/merge-two-sorted-lists/
 
     Tags: Practice; Concepts; Algorithms; Recursion/BackTracking; Easy
+
+    NOTE: Though the problem tag says recursive, this is the Iterative solution
 """
 
 from typing import Optional
