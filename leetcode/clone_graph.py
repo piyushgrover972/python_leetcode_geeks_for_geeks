@@ -1,7 +1,7 @@
 """
     https://leetcode.com/problems/clone-graph/
 
-    Tags: Practice; Concepts; Algorithms; BFS/DFS; Medium
+    Tags: POTD; BFS/DFS; Medium
 """
 
 from typing import Optional
