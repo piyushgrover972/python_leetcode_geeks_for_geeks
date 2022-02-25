@@ -1,7 +1,7 @@
 """
     https://leetcode.com/problems/number-of-1-bits/submissions/
 
-    Tags: Practice; Concepts; Algorithms; Bit Manipulation; Easy
+    Tags: Practice; Concepts; Algorithms; Bit Manipulation; Study Plan; Programming Skills; Easy
 """
 
 
