@@ -1,7 +1,7 @@
 """
     https://leetcode.com/problems/counting-bits/
 
-    Tags: Dynamic programming; Bit Manipulation; Easy
+    Tags: Dynamic programming; Bit Manipulation; Easy; POTD
 """
 
 from typing import List
